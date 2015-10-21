@@ -19,6 +19,7 @@ def connected(p, q):
         return True
     else:
         return False
+        return True
 
 
 def union(p, q):
