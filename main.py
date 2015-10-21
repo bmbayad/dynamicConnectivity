@@ -1,5 +1,5 @@
-__author__ = 'bmbayad'
-import quickfind
+__author__ = 'bmbayad1'
+#import quickfind
 import quickfind_enhanced
 
 
