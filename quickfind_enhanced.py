@@ -2,10 +2,8 @@ import settings
 
 __author__ = 'bmbayad'
 
-
 def load_setting():
     settings.setup()
-
 
 def connected(p, q):
     """
