@@ -1,6 +1,6 @@
 import settings
 
-__author__ = 'bmbayad'
+__author__ = 'bmbayad1'
 
 def load_setting():
     settings.setup()
