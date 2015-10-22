@@ -28,7 +28,7 @@ def union(p, q):
     """
     pid_root = find(p)
     qid_root = find(q)
-    print "\t %d--%d" %(pid_root,qid_root)
+    #print "\t %d--%d" %(pid_root,qid_root)
 
     if pid_root == qid_root: return
 
@@ -53,13 +53,27 @@ def unionize():
     for item in settings.unions:
         p = find(item[0])
         q = find(item[1])
-        print "(%d -- %d)" %(p,q)
+        #print "(%d -- %d)" %(p,q)
         union(p, q)
 
 
 def print_tree():
     print settings.mainArray
+    import networkx as nx
+    import matplotlib.pyplot as plt
 
+
+    #create an empty graph
+    G = nx.Graph()
+
+    for item in settings.unions:
+        G.add_edge(item[0],item[1]);
+
+    #draw the graph
+    nx.draw(G,with_labels=True)
+
+    #show the graph after addition of nodes
+    plt.show()
 
 def run():
     load_setting()
