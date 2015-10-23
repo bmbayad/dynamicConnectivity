@@ -4,7 +4,7 @@ __author__ = 'bmbayad'
 def binarySearch(search_array, key):
     # assuming that the array will be sorted
 
-    lo = search_array[0]
+    lo = 0
     hi = len(search_array) - 1
 
     while lo <= hi:
@@ -19,7 +19,15 @@ def binarySearch(search_array, key):
 
 def run():
     key = 5
-    search_array = [2, 3, 4, 5, 6]
+    #search_array = [-1,-1,2, 3, 4, 5, 6,7]
+    search_array = []
+    with open("data/1Kints.txt") as f:
+        for line in f:
+            search_array.append(int(line.strip()))
+
+    search_array.sort()
+
+
     idx = binarySearch(search_array, key)
     print "key: %d was found on index: %d" %(key,idx)
 
