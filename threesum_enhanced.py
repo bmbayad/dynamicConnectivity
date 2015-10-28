@@ -8,11 +8,11 @@ def threesum(threesum_array):
     count = 0
     for i in range(length):
         for j in range(i + 1, length):
-            idx = binarySearch.binarySearch(threesum_array[j+1:], -(threesum_array[i] + threesum_array[j]))
+            idx = binarySearch.binarySearch(threesum_array[j + 1:], -(threesum_array[i] + threesum_array[j]))
             if idx != -1:
                 count += 1
 
-    print "%d matches were found" %count;
+    print "%d matches were found" % count;
 
 
 def run():
@@ -23,7 +23,7 @@ def run():
 
     threesum_array.sort()
     t = timeit.Timer(lambda: threesum(threesum_array))
-    print "enhanced 3-sum took: %d secs" %t.timeit(number=1)
+    print "enhanced 3-sum took: %d secs" % t.timeit(number=1)
 
 
 if __name__ == '__main__':
