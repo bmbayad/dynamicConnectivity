@@ -43,7 +43,7 @@ class Graph(object):
         (self.adj[w]).enqueue(v)
 
     def adj(self, v):
-        # return a list of vertices adjacent to v
+        # return a list of vertices adjacent to v1
         pass
 
     def toString(self):
