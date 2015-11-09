@@ -70,3 +70,13 @@ class linkedlist(object):
 
     def get_size(self):
         return self.size
+
+
+    def get_linkedlist_iterator(self):
+        arr = []
+        curr = self.first
+        while curr is not None:
+            #print curr.item
+            arr.append(curr.item)
+            curr = curr.node
+        return  arr
