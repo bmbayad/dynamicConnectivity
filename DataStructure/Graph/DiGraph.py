@@ -1,9 +1,10 @@
 __author__ = 'bmbayad'
+
 from Queue import QueueLinkedlist
 import networkx as nx
 import matplotlib.pyplot as plt
 
-class Graph(object):
+class DiGraph(object):
 
     def __init__(self, IN):
         #setup the graph
@@ -42,7 +43,7 @@ class Graph(object):
         # add edge v-w to this graph
         (self.adj[v]).enqueue(w)
         # print (self.adj[v]).size()
-        (self.adj[w]).enqueue(v)
+        #(self.adj[w]).enqueue(v)
 
     def get_adj(self, v):
         # return a list of vertices adjacent to v1
@@ -65,8 +66,9 @@ class Graph(object):
         plt.show()
 
 if __name__ == '__main__':
-    f = open(r'..\..\data\tinyg.txt', "r")
-    client = Graph(f)
+    f = open(r'..\..\data\tinydg.txt', "r")
+    client = DiGraph(f)
+    print client.show_graph()
 
     #client.tostring()
     #temp = client.get_adj(237)

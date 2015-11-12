@@ -18,7 +18,6 @@ def connected(p, q):
     else:
         return False
 
-
 def union(p, q):
     """
     Connects the nodes p and q

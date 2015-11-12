@@ -1,5 +1,6 @@
 __author__ = 'bmbayad'
 from Graph import Graph
+from DiGraph import DiGraph
 
 
 class DepthFirstSearch(object):
@@ -56,14 +57,20 @@ class DepthFirstPaths(object):
 
 
 if __name__ == '__main__':
-    f = open(r'..\..\data\mediumg.txt', "r")
-    graph = Graph(f)
+    #f = open(r'..\..\data\mediumg.txt', "r")
+    #graph = Graph(f)
 
     # dfs = DepthFirstSearch(graph, 0)
 
 
-    dfs = DepthFirstPaths(graph, 0)
-    print dfs.edge_to
-    arr = dfs.path_to(3)
-    print arr[::-1]
+    #dfs = DepthFirstPaths(graph, 0)
+    #print dfs.edge_to
+    #arr = dfs.path_to(3)
+    #print arr[::-1]
     #graph.show_graph()
+
+    f = open(r'..\..\data\tinyDG.txt', "r")
+    graph = DiGraph(f)
+    client = DepthFirstPaths(graph,0)
+    print client.edge_to
+

@@ -2,7 +2,6 @@ __author__ = 'bmbayad'
 
 import json
 
-
 mainArray = []
 levelsArray = []
 
@@ -16,6 +15,6 @@ def setup():
         data = json.load(inputJson)
         size = data["size"]
         unions = data["union"]
-        mainArray = [ i for i in range(size)]
+        mainArray = [i for i in range(size)]
 
     levelsArray = [1 for i in range(size)]
